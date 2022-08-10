@@ -79,25 +79,25 @@ function build_inspector() {
   echo "Done"
 }
 
-while getopts " i d D h " option; do
-  case "$option" in
-    i ) BUILD_INSPECTOR=1;;
-    d ) FETCH_DEPS=0;;
-    D ) FETCH_DEPS=0; USE_SSH="--use-ssh";;
-    h ) print_usage; exit 1;;
-    *) exit 1 ;;
-  esac
-done
+# while getopts " i d D h " option; do
+#   case "$option" in
+#     i ) BUILD_INSPECTOR=1;;
+#     d ) FETCH_DEPS=0;;
+#     D ) FETCH_DEPS=0; USE_SSH="--use-ssh";;
+#     h ) print_usage; exit 1;;
+#     *) exit 1 ;;
+#   esac
+# done
 
-if [[ -n ${FETCH_DEPS+x} ]]; then
-  fetch_and_build_dependencies
-fi
+# if [[ -n ${FETCH_DEPS+x} ]]; then
+#   fetch_and_build_dependencies
+# fi
 
-if [[ -n ${BUILD_INSPECTOR+x} ]]; then
-  build_inspector
-fi
+# if [[ -n ${BUILD_INSPECTOR+x} ]]; then
+ build_inspector
+# fi
 
-if [[ -z ${FETCH_DEPS+x} && -z ${BUILD_INSPECTOR+x} ]]; then
-  fetch_and_build_dependencies
-  build_inspector
-fi
+# if [[ -z ${FETCH_DEPS+x} && -z ${BUILD_INSPECTOR+x} ]]; then
+#   fetch_and_build_dependencies
+#   build_inspector
+# fi
