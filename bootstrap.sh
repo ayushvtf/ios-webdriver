@@ -57,7 +57,7 @@ function build_inspector() {
   assert_has_npm
   CURRENT_DIR=$(pwd)
   RESOURCE_BUNDLE_DIR="$CURRENT_DIR/Resources/WebDriverAgent.bundle"
-  INSPECTOR_DIR="$CURRENT_DIR/Inspector"
+  INSPECTOR_DIR="/usr/local/lib/node_modules/react-native/React/Inspector"
 
   echo "Creating bundle directory..."
   if [[ -e "$RESOURCE_BUNDLE_DIR" ]]; then
