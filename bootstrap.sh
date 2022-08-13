@@ -67,7 +67,7 @@ function build_inspector() {
   cd "$INSPECTOR_DIR"
 
   echo "Fetching Inspector dependencies..."
-  npm install
+  npm install --legecy-peer-deps @react-navigation/stack --force
 
   echo "Validating Inspector"
   "$INSPECTOR_DIR"/node_modules/.bin/eslint js/*
